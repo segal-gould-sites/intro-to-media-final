@@ -1,0 +1,266 @@
+<html>
+<head>
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="https://yui-s.yahooapis.com/combo?pure/0.6.0/base-min.css&pure/0.6.0/grids-min.css&pure/0.6.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet"
+          href="https://yui-s.yahooapis.com/combo?pure/0.6.0/base-min.css&pure/0.6.0/grids-min.css&pure/0.6.0/grids-responsive-min.css">
+    <!--<![endif]-->
+    <title>Results</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+        <div class="l-box">
+            <h1>
+                <strong>{{ items[0] }} {{ items[1] }}</strong>
+            </h1>
+            <h3>
+                Other candidates' results:
+            </h3>
+            <p>
+                {{ items[2] }}
+            </p>
+            <p>
+                {{ items[3] }}
+            </p>
+            <p>
+                {{ items[4] }}
+            </p>
+            <p>
+                {{ items[5] }}
+            </p>
+            <br>
+            <h3>
+                <a href="../">Try again!</a>
+            </h3>
+            <h3>
+                Or view the <a href="{{ url_for('static', filename='topics.txt') }}">topics</a> in full!
+            </h3>
+        </div>
+    </div>
+    <div class="pure-u-1 pure-u-md-1-3">
+        <div class="l-box">
+            <img class="pure-img" src="data:image/png;base64,{{ items[6] }}"/>
+        </div>
+    </div>
+    <div class="pure-u-1 pure-u-md-1-3">
+            <div class="l-box">
+                <img class="pure-img" src="data:image/png;base64,{{ items[7] }}"/>
+            </div>
+        </div>
+    <div class="pure-u-1">
+        <div class="l-box">
+            <h3>The top five most prevalent topics for each candidate:</h3>
+            <div style="overflow-x:auto;">
+                <table>
+                    <tbody>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>Hillary Clinton</td>
+                        <td>Donald Trump</td>
+                        <td>Bernie Sanders</td>
+                        <td>Gary Johnson</td>
+                        <td>Jill Stein</td>
+                    </tr>
+                    <tr>
+                        <td>Topic #0</td>
+                        <td>
+                            <p>twitter</p>
+                            <p>com</p>
+                            <p>pic</p>
+                            <p>hrc</p>
+                            <p>io&nbsp;</p>
+                        </td>
+                        <td>
+                            <p>needs</p>
+                            <p>family</p>
+                            <p>illegal</p>
+                            <p>immigration</p>
+                            <p>huge</p>
+                        </td>
+                        <td>
+                            <p>wealth</p>
+                            <p>woman</p>
+                            <p>percent</p>
+                            <p>hall</p>
+                            <p>morning</p>
+                        </td>
+                        <td>
+                            <p>www</p>
+                            <p>https</p>
+                            <p>com</p>
+                            <p>govgaryjohnson</p>
+                            <p>live</p>
+                        </td>
+                        <td>
+                            <p>ly</p>
+                            <p>bit</p>
+                            <p>student</p>
+                            <p>debt</p>
+                            <p>need</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Topic #1</td>
+                        <td>
+                            <p>la</p>
+                            <p>que</p>
+                            <p>el</p>
+                            <p>en</p>
+                            <p>los&nbsp;</p>
+                        </td>
+                        <td>
+                            <p>realdonaldtrump</p>
+                            <p>trump</p>
+                            <p>donald</p>
+                            <p>like</p>
+                            <p>president&nbsp;</p>
+                        </td>
+                        <td>
+                            <p>war</p>
+                            <p>billionaires</p>
+                            <p>twimg</p>
+                            <p>amp</p>
+                            <p>works&nbsp;</p>
+                        </td>
+                        <td>
+                            <p>tax</p>
+                            <p>happy</p>
+                            <p>real</p>
+                            <p>ve</p>
+                            <p>want&nbsp;</p>
+                        </td>
+                        <td>
+                            <p>com</p>
+                            <p>www</p>
+                            <p>twitter</p>
+                            <p>http</p>
+                            <p>jill2016&nbsp;</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Topic #2</td>
+                        <td>
+                            <p>wall</p>
+                            <p>street</p>
+                            <p>class</p>
+                            <p>middle</p>
+                            <p>tax</p>
+                        </td>
+                        <td>
+                            <p>univision</p>
+                            <p>yes</p>
+                            <p>asktrumppic</p>
+                            <p>book</p>
+                            <p>standing</p>
+                        </td>
+                        <td>
+                            <p>people</p>
+                            <p>com</p>
+                            <p>twitter</p>
+                            <p>country</p>
+                            <p>bernie&nbsp;</p>
+                        </td>
+                        <td>
+                            <p>http</p>
+                            <p>johnson</p>
+                            <p>teamgov</p>
+                            <p>ow</p>
+                            <p>ly</p>
+                        </td>
+                        <td>
+                            <p>energy</p>
+                            <p>need</p>
+                            <p>climate</p>
+                            <p>fossil</p>
+                            <p>clean&nbsp;</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Topic #3</td>
+                        <td>
+                            <p>com</p>
+                            <p>twitter</p>
+                            <p>pic</p>
+                            <p>hillary</p>
+                            <p>sign</p>
+                        </td>
+                        <td>
+                            <p>com</p>
+                            <p>twitter</p>
+                            <p>https</p>
+                            <p>makeamericagreatagain</p>
+                            <p>great</p>
+                        </td>
+                        <td>
+                            <p>change</p>
+                            <p>climate</p>
+                            <p>vote</p>
+                            <p>energy</p>
+                            <p>trade&nbsp;</p>
+                        </td>
+                        <td>
+                            <p>twitter</p>
+                            <p>com</p>
+                            <p>status</p>
+                            <p>libertarian</p>
+                            <p>pic&nbsp;</p>
+                        </td>
+                        <td>
+                            <p>com</p>
+                            <p>people</p>
+                            <p>corporate</p>
+                            <p>need</p>
+                            <p>twitter&nbsp;</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Topic #4</td>
+                        <td>
+                            <p>amp</p>
+                            <p>twimg</p>
+                            <p>com</p>
+                            <p>https</p>
+                            <p>rights</p>
+                        </td>
+                        <td>
+                            <p>realdonaldtrump</p>
+                            <p>tonight</p>
+                            <p>great</p>
+                            <p>foxandfriends</p>
+                            <p>enjoy</p>
+                        </td>
+                        <td>
+                            <p>com</p>
+                            <p>bernie</p>
+                            <p>http</p>
+                            <p>twitter</p>
+                            <p>pic</p>
+                        </td>
+                        <td>
+                            <p>day</p>
+                            <p>debate</p>
+                            <p>military</p>
+                            <p>says</p>
+                            <p>years</p>
+                        </td>
+                        <td>
+                            <p>jill2016</p>
+                            <p>http</p>
+                            <p>com</p>
+                            <p>help</p>
+                            <p>ballot</p>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

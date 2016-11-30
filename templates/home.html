@@ -1,0 +1,84 @@
+<html>
+<head>
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="https://yui-s.yahooapis.com/combo?pure/0.6.0/base-min.css&pure/0.6.0/grids-min.css&pure/0.6.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="https://yui-s.yahooapis.com/combo?pure/0.6.0/base-min.css&pure/0.6.0/grids-min.css&pure/0.6.0/grids-responsive-min.css">
+    <!--<![endif]-->
+    <title>Intro to Media Final Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="pure-g">
+        <div class="l-box">
+            <div class="pure-u-1">
+                <h1>
+                    Enter text that you expect to sound like
+                    <span style="color:DarkBlue;font-weight:bold"><a href="https://twitter.com/HillaryClinton">Hillary Clinton</a></span>,
+                    <span style="color:DarkRed;font-weight:bold"><a href="https://twitter.com/realDonaldTrump">Donald Trump</a></span>,
+                    <span style="color:DodgerBlue ;font-weight:bold"><a href="https://twitter.com/BernieSanders">Bernie Sanders</a></span>,
+                    <span style="color:Gold ;font-weight:bold"><a href="https://twitter.com/govgaryjohnson">Gary Johnson</a></span>, or
+                    <span style="color:DarkGreen ;font-weight:bold"><a href="https://twitter.com/DrJillStein">Jill Stein</a></span>
+                    during their individual campaigns for president of the United States.
+                </h1>
+                <h3>
+                    This page will output the probability found through a
+                    Naive Bayes Classifier and a Stochastic Gradient Descent Classifier which were
+                    trained on the tweets shared by each candidate during their individual campaigns
+                    that the text you choose to input resembles those tweets. It also uses
+					Latent Dirichlet Allocation to build a topic model of all tweets from a candidate
+					as well as your input.
+                </h3>
+				<p>Follow <a href="https://twitter.com/intro_to_media">@intro_to_media</a> to see users' (<strong>uncensored</strong>) queries.</p>
+                <form action="{{ url_for('submit_textarea') }}" id="textform" method="post">
+                    <textarea name="text">Vote for me!</textarea>
+                    <br>
+                    <br>
+                    <div class="pure-u-1 pure-u-md-1-2 l-box-2">
+                        <input type='submit' name="TextNB" value='Submit as Naive Bayes'>
+                        <input type='submit' name="TextSGD" value='Submit as Stochastic Gradient Descent'>
+                    </div>
+                </form>
+				<p>
+					Or feel free to try some examples:
+				</p>
+                <div class="choice-container">
+                    <form action="{{ url_for('submit_dropdown') }}" method='post'>
+                        <select class="choice" name ="choice" id="choice">
+                            <option value="" disabled="disabled"  style="display:none" selected="selected">Please select an example.</option>
+                            <option value="#ImWithHer">(Almost definitely) Hillary Clinton</option>
+                            <option value="#MAGA">(Absolutely) Donald Trump</option>
+                            <option value="#FeelTheBern">(Probably) Bernie Sanders</option>
+                            <option value="#YouIn?">(Likely to be) Gary Johnson</option>
+                            <option value="#ItsInOurHands">(Positively) Jill Stein</option>
+							<option value="Surprise me!">Surprise me!</option>
+                        </select>
+                        <br>
+                        <br>
+                        <div class="pure-u-1 pure-u-md-1-2 l-box-2">
+                            <input type='submit' name="SelectNB" value='Submit as Naive Bayes'>
+                            <input type='submit' name="SelectSGD" value='Submit as Stochastic Gradient Descent'>
+                        </div>
+                    </form>
+                </div>
+                <p>
+                    Read more about (this) <a href="https://en.wikipedia.org/wiki/Naive_Bayes_classifier#Multinomial_naive_Bayes">Naive Bayes Classifier</a> <a href="http://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html">here</a>.
+                </p>
+                 <p>
+                    Read more about (this) <a href="https://en.wikipedia.org/wiki/Stochastic_gradient_descent">Stochastic Gradient Descent Classifier</a> <a href="http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDClassifier.html">here</a>.
+                </p>
+                 <p>
+                    Read more about (this) <a href="https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation">Latent Dirichlet Allocation Topic Model</a> <a href="http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.LatentDirichletAllocation.html">here</a>.
+                </p>
+				<p>
+					<sub>
+						A project by <a href="http://segal-gould.com">Noah Segal-Gould</a> for <a href="https://courseblogs.bard.edu/lit235f16/about/">Introduction to Media</a>.
+                    </sub>
+				</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
