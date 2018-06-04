@@ -1,4 +1,3 @@
 # Noah Segal-Gould's Introduction to Media Final Project
-http://intro-to-media.segal-gould.com
-
+The website is currently offline.
 Written for Python 2.7
